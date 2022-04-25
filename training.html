@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>training</title>
+    <style>
+
+      *{margin:0; padding:0; box-sizing: border-box;}
+      
+      #root {
+      width:100vw;
+      height:100vh; 
+      background-color: darkslategray;
+    }
+      #root div {
+        width:120px;
+        height:120px;
+        border: 1px solid white;
+        color: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+      }
+      
+      
+    </style>
+</head>
+<body>
+  <div id="root">
+    <div>날 눌러라</div>
+    <div>2</div>
+  </div>
+
+          <!--  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  <script>
+    const root = document.getElementById("root");
+    const one = root.children[0]; //text node 문자 (1)
+    const two = root.children[1]; //text node 문자 (2)
+
+    two.textContent = "변한드아아앙"
+    
+    
+    console.log(root);
+    console.dir(root);
+    console.dir(root.children[0]);
+    console.log(typeof two.textContent);
+
+
+    one.addEventListener('wheel' , function(){
+      two.textContent = "따 란 ~"
+      two.style.backgroundColor = "blue";
+      two.style.transition = "2s";
+      two.style.width = "400px";
+
+      console.log(two.style.backgroundColor);
+      
+      if(two.style.backgroundColor === "blue") {
+        two.style.backgroundColor = "yellow";
+        
+      }
+      
+    })
+
+    
+
+
+
+
+
+
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>

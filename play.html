@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>play</title>
+ 
+</head>
+<body>
+  <div id="main">
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+  </div>
+
+  <script>
+    document.body.style.margin = "0";
+    document.body.style.padding = "0";
+    
+    
+    const main = document.getElementById ("main");
+    const box1 = document.getElementById ("box1");
+    const box2 = document.getElementById ("box2");
+    const box3 = document.getElementById ("box3");
+    const box4 = document.getElementById ("box4");
+
+    let sizeList = [100,200,300,400,500,600] ;
+    let colorList = 
+    ["green" , "blue" , "yellow" , "orange"] ;
+    let widthValue = 100;
+
+    main.style.width = `${sizeList[1]}vw`;
+    main.style.height = `${sizeList[1]}vh`;
+    // main.style.backgroundColor = "blue";    
+    main.style.display = "flex";
+    main.style.flexDirection = "column";
+
+    box1.style.width = `${sizeList[0]}px`;
+    box1.style.height = `${sizeList[0]}px`;
+    box1.style.backgroundColor = "red";
+    
+    box2.style.width = `${sizeList[1]}px`;
+    box2.style.height = `${sizeList[1]}px`;
+    box2.style.backgroundColor = "red";
+  
+    box3.style.width = `${sizeList[2]}px`;
+    box3.style.height = `${sizeList[2]}px`;
+    box3.style.backgroundColor = "red";
+   
+    box4.style.width = `${sizeList[3]}px`;
+    box4.style.height = `${sizeList[3]}px`;
+    box4.style.backgroundColor = "red";
+
+    box1.addEventListener("click",function () {
+      box1.style.backgroundColor=colorList[0];
+    })
+    
+    box2.addEventListener("click",function () {
+      box2.style.backgroundColor=colorList[1];
+    })
+     
+    box3.addEventListener("click",function () {
+      box3.style.backgroundColor=colorList[3];
+    })
+    
+     
+    box4.addEventListener("click",function () {
+      box4.style.backgroundColor=colorList[2];
+    })
+  </script>
+  
+  
+  
+</body>
+</html>

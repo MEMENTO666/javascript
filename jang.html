@@ -1,0 +1,34 @@
+<body>
+  <button id="click-button">클리가셍</button>
+  <ul id="target">
+    <!-- 자식은 밑에서 반복문으로 생성 -->
+  </ul>
+
+  <script>
+    const clickButton = document.getElementById('click-button');
+    const listParent = document.getElementById('target'); // ul 가져옴
+    
+    // 1000개 자식 노드를 생성
+    // <li class="items">items-1</li> 부터
+    // ...
+    // <li class="items">items-1000</li> 까지
+    for(let i=0; i < 1000; i++) {
+      const newChild_li = document.createElement('li'); // li를 아직 보이지 않는 메모리에 생성
+      newChild_li.classList.add('items'); // 클래스네임을 니가 items로 동일하게 해서 나도그냥 동일하게 줌
+      newChild_li.textContent = `items-${i + 1}`; // 텍스트 삽입
+
+      listParent.appendChild(newChild_li); // 방금 생성한 자식(li)을 ul(부모)에 추가 (그럼 이제 보임)
+    }
+
+    const childList = listParent.children;
+    clickButton.addEventListener('click', function () {
+      for(let i=0; i<1000; i++) {
+        if(childList[i].style.display === 'none') { // none일 경우
+          childList[i].style.display = ''; // none을 없애서 보이게 함
+        } else { // none이 아닐 경우
+          childList[i].style.display = 'none'; // none으로 설정해서 안보이게 함
+        }        
+      }
+    });
+  </script>
+</body>
