@@ -36,13 +36,24 @@
     // console.log(root.style.backgroundColor);
     
     if(data === true) {
-      console.log("data 값은 : " + data);
+      // console.log("data 값은 : " + data);
       data = false;
       root.style.backgroundColor = "purple";
+      root.style.width = "100vw"; //클릭하면 100으로 돌아옴
+      root.style.height = "100vh";
+      // root.style.marginLeft = "0";
+
+
     }else { // else의 영역 data !== true , data === false
-      console.log("지금 else로 data 값은 : " + data);
+      // console.log("지금 else로 data 값은 : " + data);
       data = true;
       root.style.backgroundColor = "darkblue";
+      root.style.width = "50vw"; //클릭하면 50으로 줄어들어
+      root.style.height = "50vh";
+      clickBtn.style.opacity = "0.5";
+      root.style.transition = "2s";
+      root.style.marginLeft = "500px";
+
     }
     
   })
