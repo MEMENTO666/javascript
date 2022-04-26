@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class-5</title>
+</head>
+<body>
+  <!-- <script>
+    const arr = ["피카츄","라이츄","파이리","꼬부기"];
+    const test = ["피카츄","라이츄","똥파리","꼬부기"];
+    
+    console.log(arr[2] === test[2]);
+    if (arr[2] === test[2]) {
+      console.log("잇힝");
+    }else {
+      test[2] = "파이리";
+      console.log(test);
+    } //15번행 if() 영역.
+    
+    if(arr[2] === test[2]) {
+      arr[2] = "독수리";
+      test[2] = "독수리";
+      console.log(arr);
+      console.log(test);
+      
+    } else {
+      console.log("똥마려");
+    }
+    
+    
+  </script> -->
+
+  
+  <div id="root"></div>
+  <!-- <script>
+    let a;
+    //내용 지정 안하고 변수만 선언해준 것.
+    console.log(a);
+    a=1;
+    console.log(a);
+
+    const root = document.getElementById("root");
+    
+    // const b;
+    console.log(b);
+    // 선언과 동시에 내용(값)을 대입해 줘야됨. 에러뜸, 어차피 안변할거니까.
+    //변수 선언과 동시에 초기화.
+    
+    
+  // </script>
+   -->
+
+  
+
+   <script>
+     const a = document.querySelector("#root");
+
+     let value = 100;
+     let colorValue = "red";
+     a.style.width = value + "vw";
+     a.style.height = `${value}vh`;
+     a.style.backgroundColor = `${colorValue}`;
+     
+     a.addEventListener("click", function (){
+      let result;
+      console.log("리절트 연산이 시작되기 전" + value + ":이값이다.");
+      result = value / 2;
+
+      a.style.width = result + "vw";
+      a.style.height = result + "vh";
+       
+      value = result;
+      console.log("리절트 값을 value 변수에 대입 시키고 난 후의 value 값" + value);
+      
+     });
+     
+   </script>
+
+</body>
+</html>

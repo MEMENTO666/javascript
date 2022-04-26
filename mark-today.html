@@ -91,7 +91,7 @@
     const text = document.getElementById ("text");
    
     let conSize = 100;
-    let boxSize = [8, 25];
+    let boxSize = [8, 25,50];
 
     con.style.width =`${conSize}vw`;
     con.style.height =`${conSize}vh`;
@@ -100,19 +100,19 @@
     con.style.alignItems = "center";
     con.style.backgroundColor = "darkgray";
 
-    left.style.width = `${boxSize[1]}vw`;
-    left.style.height = `${boxSize[1]}vw`;
+    left.style.width = conSize / 2+"vw";
+    left.style.height = conSize / 2+"vh";
     left.style.backgroundColor = "purple";
     
-    right.style.width = `${boxSize[1]}vw`;
-    right.style.height = `${boxSize[1]}vw`;
+    right.style.width = conSize / 2+"vw";
+    // right.style.height = consize /2+"vh";
     right.style.display = "flex";
     right.style.flexDirection = "column";
     right.style.backgroundColor = "green";
 
     text.style.backgroundColor = "gray";
-    text.style.width = `${conSize}%`;
-    text.style.height = `${conSize}%`;
+    text.style.width = `${boxSize[2]}vw`;
+    text.style.height = `${boxSize[1]}vw`;
 
     box.style.width = `${conSize}%`;
     box.style.height = `${conSize}%`;
