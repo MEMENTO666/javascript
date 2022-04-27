@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>click-text ++</title>
+</head>
+<body>
+  <h1>춥다</h1>
+
+
+  <script>
+    const h1 = document.querySelector("h1");
+    console.log(h1);
+    console.dir(h1.style);
+    let fontSizeValue = 20;
+    let fontSizeValue1 = 26;
+    h1.style.fontSize = fontSizeValue+"px";
+
+
+
+    let data = true;
+    h1.addEventListener ("click", function(){
+      fontSizeValue++
+      //클릭할때마다 숫자값을 1씩 증가시킨다.
+      console.log(fontSizeValue);
+      h1.style.fontSize = fontSizeValue+"px";
+
+      if (fontSizeValue > fontSizeValue1) {
+        fontSizeValue --
+        h1.style.backgroundColor = "red";
+        console.log(fontSizeValue)
+
+        
+      }
+      
+    })
+    
+    
+  </script>
+  
+  
+  
+</body>
+</html>
