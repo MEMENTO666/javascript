@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-29</title>
+</head>
+<body>
+  <div id="container">
+    <div id="box1"></div>
+    <div id="box2"></div>
+  </div>
+
+
+  <script>
+    const con = document.getElementById("container");
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+
+     
+
+    con.style.width = "100vw";
+    con.style.height = "100vw";
+    con.style.display = "flex";
+    con.style.justifyContent = "center";
+    con.style.alignItems = "center";
+    
+    let sizeList = [500];
+    let colorList = ["red", "blue"];
+
+    box1.style.width = `${sizeList[0]}px`;
+    box1.style.height = `${sizeList[0]}px`;
+    box1.style.backgroundColor = "red";
+    box1.style.position = "absolute";
+    box1.style.left = "100px";
+    box1.style.top = "100px";
+    box1.style.zIndex = 2;
+    
+    
+    box2.style.width = `${sizeList[0]}px`;
+    box2.style.height = `${sizeList[0]}px`;
+    box2.style.backgroundColor = "blue";
+    box2.style.zIndex = 1;
+    box2.style.position = "absolute";
+
+
+    let boxZindex = 0;
+    for(let i=0; i<10; i++) {
+
+    }
+    
+    box1.addEventListener("click",function(){
+      // box1.style.zIndex = 0;
+      boxZindex++;
+      box1.style.zIndex = boxZindex;
+      console.log ("클릭클릭");
+    })
+    
+    box2.addEventListener("click",function(){
+      box2.style.zIndex = boxZindex;
+      console.log ("클릭클릭클릭")
+      
+    })
+
+  </script>
+  
+  
+  
+  
+  
+</body>
+</html>
