@@ -7,27 +7,49 @@
   <title>del</title>
 </head>
 <body>
-  <div id="root">
-
+  <div id="leftPanel">
+    <div></div>
   </div>
-
+ 
   <script>
-   const rootObject = document.getElementById("root");
-   
-  
-   for ( let i=2; i < 10; i++) {
-     console.log (i + "구구단을 외자");
-     for(let j=1; j<10; j++) {
-       console.log ( i + "x" + j + "=" + i * j);
-      }
-      console.log(i+"끝");
+  const colorList = [
+      'red', 'green', 'orange', 'yellow', 'green', 
+      'purple', 'black', 'grey', 'pink', 'cyan'
+    ];
+
+    const leftPanel = document.getElementById("leftPanel");
+    
+    let topZIndexValue = 0;
+    for(let i=0; i<10; i++) {
+      const rect = document.createElement('div');
+      rect.style.position = 'absolute';
+      rect.style.left = `${i * 30}px`;
+      rect.style.top = `${i * 30}px`;
+      rect.style.width = '200px';
+      rect.style.height = '200px';
+      rect.style.backgroundColor = colorList[i];
+      rect.style.zIndex = topZIndexValue;
+      console.log("호호호");
+      console.log("하하하");
+      
+      rect.addEventListener('click', function () {
+        topZIndexValue++;
+        rect.style.zIndex = topZIndexValue; // 2
+      });
+
+      leftPanel.appendChild(rect);
     }
-    
-
-
-
-    
   </script>
+</body>
+  
+
+
+  
+
+
+
+    
+ 
   
   
   
