@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class-10</title>
+  <style>
+    *{margin:0; padding: 0; box-sizing: border-box;}
+    .container {
+      width:100vw;
+      height:100vh;
+      display: flex;
+    }
+    #con1 {
+      width:10vw;
+      height:100vh;
+      background-color: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content:space-evenly;
+      flex-direction: column;
+    }
+
+    #con1 div {
+      width:80px;
+      height:80px;
+      background-color: rgb(161, 153, 153);
+      align-items: flex-start;
+      justify-content: center;
+      
+    }
+
+    #cona {
+      display: flex;
+      font-size: 50px;
+    }
+    
+    #con2 {
+      width:25vw;
+      height:100vh;
+      background-color: rgb(75, 69, 69);
+      padding: 20px;
+    }
+    
+    #con3 {
+      width:25vw;
+      height:100vh;
+      background-color: rgb(32, 30, 30);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #con3 div {
+      /* width:600px; */
+      /* height: 500px; */
+      /* position: absolute; */
+      /* transform: rotate(60deg); */
+      /* border-radius: 60% 30% 50% 20%; */
+    }
+
+    #con3 div:nth-child(1) {
+      width:600px;
+      height: 500px;
+      opacity: 0.85;
+      background-color: rgba(0, 0, 0, 0.726);
+      z-index: 2;
+      margin-left: 60px;
+      margin-bottom:60px;
+      
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 90px;
+      font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      position: absolute;
+      border-radius: 20% 50% 30% 50%;
+      
+    }
+    #con3 div:nth-child(2) {
+      width:600px;
+      height: 500px;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.26);
+      box-shadow: 1px 1px 1px 0px;
+      opacity: 1;
+      margin-top: 60px;
+      margin-left: 80px;
+      position: absolute;
+      border-radius: 20% 50% 30% 50%;
+    }
+
+    #text {
+      width:100%;
+      height:100vh;
+      padding: 20px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    
+    #con4 {
+      width:40vw;
+      height:100vh;
+      background-color: lightgray;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding:20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+   <div id="con1">
+     <div id="cona">
+       <p>A</p>
+     </div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+     <div></div>
+   </div>
+   <div id="con2">
+     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas inventore expedita, fugit delectus nihil voluptatum veniam temporibus assumenda eos asperiores officiis laudantium maxime eveniet ipsum a ullam voluptas dolorum error sint distinctio saepe! Delectus blanditiis atque ratione pariatur maxime vel est ut. Eos architecto consequatur tempora repudiandae cumque saepe ipsum.</p>
+   </div>
+   <div id="con3">
+     <div>
+       <p>BIG FONT</p>
+     </div>
+     <div></div>
+     <div id="text">
+       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae autem nemo beatae id quaerat, obcaecati fuga doloremque dicta modi, iusto libero maxime veniam. Deserunt iste totam vero deleniti quidem architecto, laborum quis neque facilis officia odio excepturi eligendi, consequatur voluptates nihil possimus. At, quasi reiciendis fuga tempora consectetur sunt dicta.</p>
+     </div>
+   </div>
+   <div id="con4">
+     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt maiores excepturi eius nisi ex delectus, velit eveniet inventore provident consequuntur doloremque sed quod unde mollitia dignissimos corrupti aut sunt dicta illum totam asperiores temporibus doloribus quos culpa? Voluptatibus temporibus dicta dolorum ab, voluptatem quas voluptatum adipisci accusantium odio deleniti asperiores.</p>
+   </div>
+  </div>
+  
+  <script>
+    const con1 = document.getElementById("con1");
+    const cona = document.getElementById("cona");
+
+    
+    con1.style.backgroundColor = "gray";
+
+
+    // for(let i=0; i > 55; i++) ;
+    cona.addEventListener ("click",function (){
+      for(let i = 0;  i < 1; i++) {
+      if(cona === 0) { 
+        // console.log("hello" + con1);
+      } else { 
+        for(let i = 0;  i < 55; i++)
+        console.log("hello" + con1);
+      }
+      // for(let i = 0;  i < 55; i--) ( cona ===0);
+
+    }
+
+        
+      })
+      
+    cona.style.backgroundColor = "orange";
+    
+    
+  </script>
+  
+  
+  
+</body>
+</html>
