@@ -23,8 +23,10 @@
 // console.log(a());
 
 function b (first, second) {
-  console.log(first + second);
-  // return first + second;
+  if(typeof first === "number") {
+  return first - second;
+}else {
+  console.error ("첫번째 매개변수 타입이 숫자가 아닙니다.");
 }
-b(1,2);
-// console.log(b(1,2));
+}
+console.log(b("천재",2));
