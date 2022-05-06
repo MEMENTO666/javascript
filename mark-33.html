@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-33</title>
+    <style>
+       *{margin:0; padding:0; box-sizing: border-box;}
+      .container {
+        width:100vw;
+        height:100vh;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+
+      h1 {font-size: 70px; 
+        }
+      
+       
+        #cross {
+          width:10px;
+          height:10px;
+          /* border: 1px solid black; */
+          font-weight: bold;
+        }
+        
+        
+      #box1 {
+        width:400px;
+        height:600px;
+       background-color:  rgba(218, 255, 10, 0.26);
+        border-radius: 40px;
+        position: relative;
+        left:80px;
+        bottom:100px;
+        box-shadow: 50px 50px 50px 00px;
+      }
+       
+      #box2 {
+        width:500px;
+        height:400px;
+        background-color:  rgba(201, 20, 192, 0.295);
+        position: relative;
+        right:80px;
+        top:190px;
+      }
+      
+       
+       
+    </style>
+</head>
+<body>
+  <div class="container">
+  <div id="box1">
+    <div id="cross">X</div>
+    <h1>LOREM 
+        IPSUM <br>
+      </h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi labore cupiditate, deserunt itaque eius perferendis, voluptatem, sed voluptatum reprehenderit quasi at? Nesciunt maxime officia quia odit. Iure illum quis, maiores earum enim recusandae quam, dicta debitis, tempora fugiat consequuntur voluptatibus.</p>
+      <button id="button">Close</button>
+    </div>
+  <div id="box2">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint dolorem consequatur vero porro tempora nisi reiciendis iusto ipsam. Veritatis magnam, sint quasi iste illum eveniet excepturi dolor necessitatibus dolorem quae minus fugiat qui molestiae sit assumenda aspernatur corporis. Fugiat qui aliquam alias inventore, exercitationem cum mollitia culpa doloribus quo recusandae assumenda voluptas saepe nobis quaerat numquam nam molestias blanditiis ad.
+  </div>
+</div>
+
+  
+  <script>
+    const box1 = document.getElementById("box1");
+    const box2 = document.getElementById("box2");
+    const button = document.getElementById("button");
+    const cross = document.getElementById("cross");
+    
+    box1.style.zIndex = 2;
+    box1.style.display = "flex";
+    box1.style.alignItems = "center";
+    box1.style.flexDirection = "column";
+    box1.style.padding = 20 + "px";
+    
+
+    cross.style.width = 20 + "px";
+    cross.style.height = 20 + "px";
+    cross.style.display = "flex";
+    cross.style.justifyContent = "center";
+    cross.style.alignItems = "center";
+    cross.style.marginLeft = 250 + "px";
+    
+
+    box2.style.display = "flex";
+    box2.style.alignItems = "flex-end";
+    box2.style.justifyContent = "center";
+    box2.style.borderRadius = 40 + "px";
+    box2.style.padding = 20 + "px";
+    
+
+
+    button.style.marginTop = 180 + "px";
+    button.style.marginLeft = 180 + "px";
+    button.style.width = 80 + "px";
+    button.style.borderRadius = 40 + "px";
+
+    
+    button.addEventListener ("click", function (){
+    console.log("haha");
+    box1.style.display = "none";
+      
+    })
+    
+    cross.addEventListener ("mouseover", function (){
+      box1.style.opacity = 0;
+      
+    })
+    
+  </script>
+  
+</body>
+
+</html>
