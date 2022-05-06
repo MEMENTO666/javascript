@@ -1,0 +1,64 @@
+<body>
+  <div id="container">
+      <div id="root">
+      </div>
+      <button id = clickBtn>click</button>
+  </div>
+   
+  
+  
+    <script>
+      const container = document.getElementById("container");
+      const root = document.getElementById("root");
+      const clickBtn = document.getElementById("clickBtn");
+  
+      // 현재 투명도를 currentOpacity에 저장해두고
+      // currentOpacity를 바꿔가면서 style.opacity에 덮어쓴다
+      let currentOpacity = 1.0;
+      
+      root.style.opacity = currentOpacity;
+      root.style.width = 100 + "px";
+      root.style.height = 100 + "px";
+      root.style.backgroundColor = "red";
+      root.style.display = "flex";
+      root.style.alignItems = "center";
+      root.style.justifyContent = "center";
+  
+      container.style.display = "flex";
+      container.style.alignItems = "center";
+      container.style.justifyContent = "center";
+      container.style.width = "100vw";
+      container.style.height = "100vh";
+
+  
+      clickBtn.addEventListener ("click",function () {
+        // 우선 클릭한 직후에
+        // 투명도를 증가시킬 동작을 할지 감소시킬 동작을 할지 먼저 결정
+        let sizeValue = 100;
+        let delta = 0.0; 
+        // 이 델타라는 변수는 코드 로직을 간소화시켜줄 매우 멋진놈임
+        // currentOpacity에 무조건 델타를 더하도록 로직을 작성한다
+        // 델타를 음수로 놓고 더하면 감소할거고 양수로놓고 더하면 증가할거다
+       
+        // 타이머 시작 전 currentOpacity가 0.0이하인 상태면 투명도를 증가시키도록 설정
+        if(currentOpacity <= 0.0) { 
+          delta = 0.1;
+        } else { // 그렇지 않으면 투명도를 감소시키도록 설정
+          delta = -0.1;
+         
+        }
+  
+        const timer = setInterval(function() {
+          currentOpacity = currentOpacity + delta; // 델타가 양수/음수에 따라 증가 또는 감소
+          root.style.opacity = currentOpacity;
+  
+          // 투명도 증가/감소 동작이 끝난 상황에서는 50ms마다 호출되는 이 타이머 함수가
+          // 더이상 호출되지 않도록 clearTimeout을 호출해줌
+          if(currentOpacity >= 1.0 || currentOpacity <= 0.0) {
+            console.log('animation end, current opacity = ', currentOpacity);
+            clearTimeout(timer);
+          }
+        }, 50);
+      })
+    </script>
+  </body>

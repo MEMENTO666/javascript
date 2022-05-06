@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fade-in</title>
+</head>
+<body>
+  <div id="root"></div>
+  
+  <button id = clickBtn>click</button>
+
+
+  <script>
+    const root = document.getElementById("root");
+    const clickBtn = document.getElementById("clickBtn");
+    let opacityValue = 0;
+    let opacityValue2 = 1;
+
+    root.style.opacity = opacityValue2;
+    root.style.width = 100 + "px";
+    root.style.height = 100 + "px";
+    root.style.backgroundColor = "red";
+    
+
+    let sungyun = true;
+    clickBtn.addEventListener ("click",function (){
+      // opacityValue = 1;
+      // root.style.opacity = opacityValue;
+      
+
+      if(sungyun === true) {
+        sungyun = false;
+        console.log(sungyun);
+
+         let fade = setInterval(function() {
+        if(opacityValue < 1) {
+          opacityValue = opacityValue - 0.1;
+          root.style.opacity = opacityValue;
+          console.log("사라짐");
+        } else {
+          clearInterval();
+        } 
+        if(opacityValue >= 1) {
+          opacityValue = opacityValue + 0.1;
+          root.style.opacity = opacityValue;
+          console.log("???")
+
+        }
+         
+        
+       
+
+      },80 );
+
+
+
+      } else {
+        
+        sungyun = true;
+        console.log(sungyun);
+        opacityValue = opacityValue + 0.1;
+      }
+
+     
+      
+      // let fade = setInterval(function() {
+      //   if(opacityValue2 < 11) {
+      //     opacityValue2 = opacityValue2 - 0.1;
+      //     root.style.opacity = opacityValue2;
+      //     console.log("사라짐");
+      //   } else {
+      //     clearInterval();
+      //   } 
+      //   if(opacityValue2 >= 1) {
+      //     opacityValue2 = opacityValue + 0.1;
+      //     root.style.opacity = opacityValue2;
+      //     console.log("???")
+
+      //   }
+         
+        
+       
+
+      // },80 );
+    })
+
+    
+    
+    
+  </script>
+  
+  
+  
+</body>
+</html>

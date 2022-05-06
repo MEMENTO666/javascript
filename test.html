@@ -1,0 +1,64 @@
+<body>
+  <div id="container">
+      <div id="root">
+      </div>
+      <button id = clickBtn>click</button>
+  </div>
+   
+  
+  
+    <script>
+      const container = document.getElementById("container");
+      const root = document.getElementById("root");
+      const clickBtn = document.getElementById("clickBtn");
+
+      let currentOpacity = 1.0;
+
+       
+    root.style.opacity = currentOpacity;
+    root.style.width = 100 + "px";
+    root.style.height = 100 + "px";
+    root.style.backgroundColor = "red";
+    root.style.display = "flex";
+    root.style.alignItems = "center";
+    root.style.justifyContent = "center";
+      
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+    container.style.justifyContent = "center";
+    container.style.width = "100vw";
+    container.style.height = "100vh";  
+
+    clickBtn.addEventListener ("click" , function (){
+
+      let delta = 0.0;
+
+      if(currentOpacity <= 0.0) {
+        delta = 0.1;
+      }else {
+        delta = -0.1;
+      }
+      const timer = setInterval(function () {
+        currentOpacity = currentOpacity + delta;
+        root.style.opacity = currentOpacity;
+
+        if (currentOpacity >=1.0 || currentOpacity <= 0.0) {
+          console.log('animation end, current opacity = ', currentOpacity);
+          clearTimeout(timer);
+        }
+      }, 60);
+      
+    })
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      </script>
