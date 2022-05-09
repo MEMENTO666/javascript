@@ -37,13 +37,14 @@
 
 
   <script>
-    const container1 = document.getElementById("container1");
-    const div = container.children[0];
+    const container = document.getElementById("container");
+    // const div = container1.children[0]
     
-    container1.addEventListener("click",function() {
-      container1.children.style.flexDirection = "column";
-      container1.children.style.backgroundColor = "red";
-      
+      container.addEventListener("click",function() {
+    
+      container.style.flexDirection = "column";
+      container.style.backgroundColor = "red";
+      console.log(container);
       
     });
     

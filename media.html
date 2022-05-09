@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    console.log(document.body.clientWidth);
+
+    let bodyValue = document.body;
+    let bodyColor = ["blue", "orange", "red"];
+    let textArr = ["좋다", "덥다", "춥다"];
+
+    
+    
+    
+    if (bodyValue.clientWidth > 768) {
+     bodyValue.textContent = textArr[0];
+      
+    }else if (bodyValue.clientWidth < 450) {
+      bodyValue.textContent = textArr[1];
+    } else {
+      bodyValue.textContent = textArr[2];
+    }
+     
+
+    
+  
+
+    
+    
+  </script>
+</body>
+</html>
