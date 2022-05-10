@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-35(teach)</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: lightslategray;
+    
+    }
+    #root>div:nth-child(1) {background-color: orange;}
+    #root>div:nth-child(2) {background-color: orangered;}
+    
+    .none {
+      display : none;
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    
+    <div id="button">button</div>
+    <div id="menu">items</div>
+    
+  </div>
+
+
+
+  <script>
+    const button = document.getElementById("button");
+    const menu = document.getElementById("menu");
+    console.log(menu);
+
+
+
+    let booleanType = true;
+    button.addEventListener ("click" , function () {
+     console.dir(menu);
+     if(menu.classList.contains("none")) {
+      menu.classList.remove("none");
+     }else {
+       menu.classList.add("none");
+     }
+      
+    })
+    
+    
+  </script>
+  
+  
+  
+</body>
+</html>
