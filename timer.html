@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>timer</title>
+</head>
+<body>
+  <div id="root">
+    <button id="startButton">START</button>
+    <button id="endButton">END</button>
+  </div>
+  <script>
+    const root = document.getElementById("root");
+    const startBtn = document.getElementById("startButton");
+    const endBtn = document.getElementById("endButton");
+
+    startBtn.style.width = "70px";
+    startBtn.style.height = "70px";
+    startBtn.style.backgroundColor = "red";
+    
+    endBtn.style.width = "70px";
+    endBtn.style.height = "70px";
+    endBtn.style.backgroundColor = "blue";
+    
+    // ***************************여기서 부터가 진짜 **********************
+    //*******************************************************************
+
+    const  label = document.createElement("p"); // label에 p라는 요소를 심어줌.
+    label.textContent = ""; 
+    // label에 빈 text 공간을 심어줌 (똑 , 딱 이 생성될 자리)
+    root.appendChild(label);
+     console.log(label);
+
+    let timer;
+
+    startBtn.addEventListener ("click", function (){
+      let tock = true;
+      label.textContent = "딱";
+      console.log("타이머 시작!");
+      timer = setInterval(function(){
+        if(tock) {
+          label.textContent = "똑";
+          tock = false;
+          console.log("똑");
+          
+        }else {
+          label.textContent = "딱";
+          tock = true;
+          console.log("딱");
+        }
+                
+        
+      },600);
+      
+    })
+   
+    endBtn.addEventListener ("click",function (){
+      clearInterval(timer);
+      console.log("멈춰!")
+      
+    });
+    
+    
+  </script>
+  
+  
+  
+  
+</body>
+</html>
