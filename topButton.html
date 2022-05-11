@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll-event</title>
+
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+  #root {
+    width:100vw;
+    height:3000px;
+    background: linear-gradient(0deg, #ccc, #333);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+  #button {
+    width:50px;
+    height:50px;
+    border: 1px solid black;
+  }
+   
+  #button2 {
+    width:50px;
+    height:50px;
+    border: 1px solid black;
+  }
+  </style>
+  
+  
+  
+  
+</head>
+<body>
+  <div id ="root">
+    <button id="button">
+    <button id="button2">
+      
+    </button>
+  </div>
+
+  <script>
+    
+   const button = document.getElementById("button");
+   const button2 = document.getElementById("button2");
+    
+    // window.addEventListener ("click", (event) => {
+    //   window.scrollTo({
+    //     top:100,
+    //     behavior:"smooth"
+        
+    //   })
+    //   console.log(window.scrollY);
+
+    // });
+
+    button.style.position = "sticky"
+    button2.style.position = "sticky"
+    
+    
+    button.addEventListener ("click", (event) => {
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+        
+        
+      })
+      console.log(window.scrollY);
+
+    });
+
+  
+    
+    button2.addEventListener ("click", (event) => {
+      window.scrollTo({
+        bottom :0,
+        behavior:"smooth"
+      
+        
+      })
+      console.log(window.scrollY);
+
+    });
+    
+    
+  </script>
+  
+  
+</body>
+</html>

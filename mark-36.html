@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-36</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+    
+    .container {
+      width:1600px;
+      height:1000px;
+      display: flex;
+    }
+
+    .container div {
+      width:1600px;
+      height:600px;
+      /* border: 1px solid black; */
+      
+    }
+
+    .container div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 175px;
+      line-height: 55px;
+      font-weight: bold;
+      /* opacity: 0.4; */
+      font-family: 'Nanum Brush Script', cursive;
+      
+    }
+
+    .container div:nth-child(2) {
+      display: flex;
+      align-items:flex-end;
+      justify-content:flex-start;
+      padding-bottom: 90px;
+      color: darkgray;
+      font-family: 'Nanum Brush Script', cursive;
+      font-size: 25px;
+
+    }
+    
+    #no1 {color: rgba(204, 32, 161, 0.219); backdrop-filter: blur(50px);}
+    #no2 {color: rgba(225, 250, 3, 0.418);}
+    #no3 {color: rgba(255, 115, 0, 0.39);}
+    #no4 {color: rgba(36, 70, 36, 0.473);}
+    #no5 {color: rgba(0, 174, 255, 0.541);}
+    #no6 {color: rgba(22, 255, 72, 0.329);}
+    #no7 {color: rgba(152, 179, 89, 0.329);}
+    #no8 {color: rgba(255, 0, 0, 0.623);}
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div>
+      <p id="no1">function</p>
+      <p id="no2">variable</p>
+      <p id="no3">constant</p>
+      <p id="no4">object</p>
+      <p id="no5">setInterval</p>
+      <p id="no6">for</p>
+      <p id="no7">else</p>
+      <p id="no8">javascript</p>
+    </div>
+    <div>
+      <p>the greatest glory in living lies not in never falling, but in rising every time we fall</p>
+    </div>
+  </div>
+
+
+  <script>
+    const java = document.getElementById("no8");
+
+
+    java.addEventListener ("click" , function (){
+      java.style.fontFamily = "impact";
+      java.style.color = "red";
+      
+      
+    })
+    
+    
+    
+    
+  </script>
+  
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #root {
+      width:100vw;
+      height:100vh;
+      background-color: lightgray;
+    }
+    
+   
+  </style>
+  
+    
+  
+  
+  
+  
+</head>
+<body>
+  <div id="root">
+      <section></section>
+  </div>
+
+  <script>
+    const root = document.getElementById("root");
+    let section = document.createElement("section");
+    root.appendChild(section);
+    let count=0;
+    
+    root.addEventListener ("click",function (){
+      console.log("되냐?");
+      let section = document.createElement("section");
+      section.style.backgroundColor ="orangered";
+      section.style.width = "50px";
+      section.style.height = "50px";
+      section.textContent =count;
+      root.appendChild(section);
+      count++;
+     
+     
+    
+      
+      
+    })
+    
+
+    
+  </script>
+  
+</body>
+</html>

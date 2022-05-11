@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>scroll-event</title>
+
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+  #root {
+    width:100vw;
+    height:3000px;
+    background: linear-gradient(0deg, #ccc, #333);
+}
+    
+  </style>
+  
+  
+  
+  
+</head>
+<body>
+  <div id="root"></div>
+
+
+  <script>
+    const root = document.getElementById("root");
+    console.log(window);
+    console.log(document.body.scrollHeight);
+
+    let docTotalHeightValue = document.body.scrollHeight;
+    
+    window.addEventListener ("scroll", (event) => {
+
+      if ( window.scrollY > 0) {
+        console.log("너 지금 스크롤 내렸다")
+        console.log(window.scrollY);
+        console.log("전체값" + docTotalHeightValue);
+        
+      }
+      if(window.scrollY >= 2048) {
+        console.log("yahoo");
+      }
+
+      
+      
+      if(event.offsetY > 250 ) {
+
+          console.log(window);
+
+      } else {
+        if(event.offsetY > 600) {
+
+        }
+      }
+    })
+    
+    
+  </script>
+  
+  
+</body>
+</html>
