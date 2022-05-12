@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-37</title>
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+      .container {
+        width:100vw;
+        height:100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #box1 {
+        width:300px;
+        height:500px;
+        /* border: 2px solid red; */
+        /* background-color: orange; */
+        z-index: 1; 
+        font-weight: bold;
+        }
+
+
+        #top {
+          border: 2px solid black;
+          width:400px;
+          height:300px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          line-height: 50px;
+          background-color: rgb(138, 43, 226);
+          color: rgb(147, 230, 15);
+          font-style: italic;
+          letter-spacing: 5px;
+        }
+   
+        #bottom {
+          border:2px solid rgb(194, 94, 155);
+          width:400px;
+          height:300px;
+          padding: 14px;
+          background-color: rgb(148, 230, 16);
+          color: rgb(244, 248, 252);
+          
+        }
+
+        #good {
+          width:190px;
+          height:40px;
+          background-color: rgb(34, 204, 176);
+          position: relative;
+          top:77px;
+          left: 90px;
+          border-radius: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 25px;
+          border: 2px solid rgb(192, 42, 192);
+          color: yellow;
+          }
+      
+      #box2 {
+        width:400px;
+        height:600px;
+        /* border: 2px solid red; */
+        position: relative;
+        right:10px;
+        top:130px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: rgba(119, 136, 153, 0.295);
+        opacity: 0.6;
+        color: white;
+      }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="box1">
+        <div id="top">
+            <h1 style="font-size:45px; line-height:70px";>BORDERLINE <br>DESIGN</h1>
+            <div id="good"><p>BAAAAAD?</p></div>
+        </div>
+        <div id="bottom"><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto reprehenderit, dignissimos, laboriosam harum omnis ratione repellendus sapiente, praesentium id incidunt ullam. Quos corrupti repellat consectetur aut tempora nulla ad natus porro sed! Earum magnam ratione sed nostrum similique dicta vel at? Perspiciatis maiores enim necessitatibus dignissimos! Placeat, fuga facere debitis magnam praesentium eveniet! Suscipit sed reiciendis esse cupiditate modi sit!</p>
+         
+        </div>
+    </div>
+    <div id="box2">
+      <h1 style="font-size: 50px;line-height: 70px;"  >MODERN <br> DESIGN</h1>
+      <p style="margin-left: 200px; margin-top: 20px; font-weight: bold;">BAAAAAAD</p>
+      <p style="margin-top: 40px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam enim sapiente maiores delectus quo dolore, illum consequatur, autem incidunt iste unde pariatur eum at assumenda. Nobis quaerat excepturi optio consectetur, laborum modi rerum placeat voluptatibus, ad, velit incidunt. Labore, iusto!</p>
+      
+    </div>
+  </div>
+
+  <script>
+    const box2 = document.getElementById("box2")
+
+    box2.addEventListener ("click",function (){
+      box2.style.zIndex = 2;
+      box2.style.opacity = 1;
+      
+    })
+    
+    
+    
+    
+  </script>
+  
+  
+</body>
+</html>
