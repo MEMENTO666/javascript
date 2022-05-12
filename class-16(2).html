@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>class-16(2)</title>
+</head>
+<body>
+  <div id="root">
+    <li id="a" class="b" data-index="1">menu-1</li>
+    <li id="a" class="b" data-index="2">menu-2</li>
+    <li id="a" class="b" data-index="3">menu-3</li>
+    <li id="a" class="b" data-index="4">menu-4</li>
+  </div> 
+
+ <script>
+   const b = document.getElementsByClassName("b");
+   const a = document.getElementById("a");
+   const root = document.getElementById("root");
+
+   root.style.display = "flex";
+   
+   
+   
+   a.addEventListener("click",()=>{
+    for(let i = 1; i < b.length; i++) {
+        b[1].style.color = "white";
+        b[2].style.color = "white";
+        b[3].style.color = "white";
+
+        if(b[i].dataset.index === "2","3,","4") {
+          b[0].style.color = "blue";
+        } else {
+          // b[i].style.opacity = 0.1;
+        }
+        
+        
+      }
+     
+   })
+   
+   
+ </script>
