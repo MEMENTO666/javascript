@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>toyProject</title>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+    <style>
+      *{margin:0; padding:0; box-sizing: border-box;}
+
+      body {
+        overflow-x: hidden;
+      }
+
+
+      #container {
+        width:100vw;
+        height:200vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: gray;
+        background-image: url(./bgc2.png);
+        background-size:cover;
+        
+      }
+      #main {
+        width:60vw;
+        height:200vh;
+        background-color: white;
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+        padding-top: 90px;
+        border-radius: 20px;
+      }
+      #text1 {
+        width: 50vw;
+        height:10vh;
+        /* border: 1px solid black; */
+        font-size: 30px;
+        color: rgb(221, 70, 108);
+        padding: 20px;
+        font-family: 'East Sea Dokdo', cursive;
+        
+      }
+      #text2 {
+        width: 50vw;
+        height:20vh;
+        /* border: 1px solid black; */
+        color: rgba(192, 192, 192, 0.808);
+        padding: 20px;
+        
+      }
+      #search {
+        width:50vw;
+        height:6vh;
+        border: 1px solid rgb(190, 190, 190);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 20px;
+        box-shadow: 2px 2px 3px 3px; color: gray;;
+      }
+
+      #search > div {
+        width:50px;
+        height:5.5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        cursor: pointer;
+      }
+      
+      #menu {
+        width:50vw;
+        height:160vh;
+        background-color: rgb(204, 209, 155);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+
+      }
+
+      #menu > div {
+        width:50vw;
+        height:20vh;
+        /* border: 1px solid black; */
+        margin: 20px;
+        color: white;
+        font-weight: bold;
+      }
+
+      
+      
+      #menuBox1  {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #menuBox1 > div {
+        width:150px;
+        height:150px;
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      #menuBox1 > div:nth-child(1) {
+        background-image: url(./짜장면.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox1 > div:nth-child(2) {
+        background-image: url(./짬뽕.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox1 > div:nth-child(3) {
+        background-image: url(./볶음밥.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox2  {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #menuBox2 > div {
+        width:150px;
+        height:150px;
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      #menuBox2 > div:nth-child(1) {
+        background-image: url(./순대국밥.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox2 > div:nth-child(2) {
+        background-image: url(./수육국밥.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox2 > div:nth-child(3) {
+        background-image: url(./비빔밥.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+
+      
+      #menuBox3  {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #menuBox3 > div {
+        width:150px;
+        height:150px;
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      #menuBox3 > div:nth-child(1) {
+        background-image: url(./피자.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox3 > div:nth-child(2) {
+        background-image: url(./햄버거.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox3 > div:nth-child(3) {
+        background-image: url(./치킨.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox4  {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #menuBox4 > div {
+        width:150px;
+        height:150px;
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      #menuBox4 > div:nth-child(1) {
+        background-image: url(./라면.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox4 > div:nth-child(2) {
+        background-image: url(./김밥.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox4 > div:nth-child(3) {
+        background-image: url(./떡볶이&튀김.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox5  {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+      #menuBox5 > div {
+        width:150px;
+        height:150px;
+        background-color: yellowgreen;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      #menuBox5 > div:nth-child(1) {
+        background-image: url(./라멘.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox5 > div:nth-child(2) {
+        background-image: url(./초밥.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      #menuBox5 > div:nth-child(3) {
+        background-image: url(./돈카츠.png);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+      }
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </style>
+  
+</head>
+<body>
+  <div id="container">
+    <div id= "main">
+      <div id="text1"><h1>아무거나</h1></div>
+      <div id="text2"><h2>메뉴선정에<br>고통받는<br>당신들을 위하여.</h2></div>
+      <div id="search">
+          <div><span class="iconify" data-icon="codicon:search" style="font-size: 45px;"></span></div>
+          <div><span class="iconify" data-icon="ps:random" style="font-size: 50px;"></span></div>
+      </div>
+      <div id="menu">
+          <div id="menuBox1">
+            <div>짜장면</div>
+            <div>짬뽕</div>
+            <div>볶음밥</div>
+          </div>
+          <div id="menuBox2">
+            <div>순대국밥</div>
+            <div>수육국밥</div>
+            <div>비빔밥</div>
+          </div>
+          <div id="menuBox3">
+            <div>피자</div>
+            <div>햄버거</div>
+            <div>치킨</div>
+          </div>
+          <div id="menuBox4">
+            <div>라면</div>
+            <div>김밥</div>
+            <div>떡볶이&튀김</div>
+          </div>
+          <div id="menuBox5">
+          <div>라멘</div>
+          <div>초밥</div>
+          <div>돈카츠</div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menu = document.getElementById("menu");
+    console.log("ononon");
+
+
+    let state = true;
+    menu.addEventListener ("mouseover" , function () {
+      if (state===true) {
+        menu.style.fontSize = "";
+        state=false;
+      } else {
+        state=true; 
+        menu.style.fontSize = "20px";
+      }
+
+    });
+   
+
+
+  </script>
+    
+    
+    
+    
+    
+  
+  </body>
+  
+</html>
