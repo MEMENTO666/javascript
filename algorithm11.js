@@ -16,7 +16,6 @@ console.log(pokemonList.length);
 let isStatus=true;
 let count = 0;
 while(isStatus === true && count < 5) {
-  console.log("test");
-  pokemonList(pokemonList[count++]);location
+  console.log(count++);
   count++;
 }
