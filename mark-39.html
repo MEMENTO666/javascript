@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mark-39</title>
+  <style>
+    
+    #circleList > div {
+      width:60px;
+      height:60px;
+      background-color: gray;
+
+    }
+    
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div id="circleList">
+      <div id="circle1">1</div>
+      <div id="circle2">2</div>
+      <div id="circle3">3</div>
+      <div id="circle4">4</div>
+      <div id="circle5">5</div>
+      <div id="circle6">6</div>
+      <div id="circle7">7</div>
+      <div id="circle8">8</div>
+      <div id="circle9">9</div>
+    </div>    
+    <button id="button">click</button>
+</div>
+
+
+  <script>
+    const root = document.getElementById("root");
+    const circleList = document.getElementById("circleList");
+    const button = document.getElementById("button");
+
+    
+    const circle1 = document.getElementById("circle1");
+    const circle2 = document.getElementById("circle2");
+    const circle3 = document.getElementById("circle3");
+    const circle4 = document.getElementById("circle4");
+    const circle5 = document.getElementById("circle5");
+    const circle6 = document.getElementById("circle6");
+    const circle7 = document.getElementById("circle7");
+    const circle8 = document.getElementById("circle8");
+    const circle9 = document.getElementById("circle9");
+    
+    
+    
+    
+    
+    
+    root.style.display = "flex";
+    root.style.width = "100vw";
+    root.style.height = "100vh";
+    root.style.justifyContent = "center"
+    root.style.alignItems = "center"
+    root.style.flexDirection = "column";
+    
+    circleList.style.width = "70vw";
+    circleList.style.height = "50vw";
+    circleList.style.justifyContent = "center";
+    circleList.style.alignItems = "center";
+    circleList.style.display = "flex";
+    circleList.style.justifyContent ="space-around";
+
+    button.style.width = "100px";
+    button.style.height = "50px";
+
+    
+    let count = 0
+    let state = true;
+    button.addEventListener("click",function () {
+      if ( state===true) {
+        circle1.style.marginBottom = "200px";
+        state=false;
+        console.log("첫번째");
+      }else if(state===true) {
+        circle2.style.marginTop = "200px";
+        state=false;
+        console.log("두번째");
+        
+      }else {
+        circle3.style.marginBottom = "200px";
+        console.log("세번째");
+
+      }
+    
+      
+    })
+    
+      
+      
+      
+      
+    </script>
+    
+    
+    
+    
+    
+  
+    </body>
+    </html>
+  <!-- //   if(state===true) {
+  //     circle1.style.marginBottom = "200px";
+  //     state=false;
+  //     console.log("down");
+      
+
+      
+  //   }else {
+  //     circle2.style.marginTop = "200px";
+  //     state=true;
+  //     console.log("up");
+     
+  //     }
+      
+
+  // });
+     -->
+    
