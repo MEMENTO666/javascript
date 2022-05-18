@@ -5,122 +5,91 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mark-39</title>
-  <style>
-    
-    #circleList > div {
-      width:60px;
-      height:60px;
-      background-color: gray;
-
-    }
-    
-  </style>
 </head>
 <body>
   <div id="root">
-    <div id="circleList">
-      <div id="circle1">1</div>
-      <div id="circle2">2</div>
-      <div id="circle3">3</div>
-      <div id="circle4">4</div>
-      <div id="circle5">5</div>
-      <div id="circle6">6</div>
-      <div id="circle7">7</div>
-      <div id="circle8">8</div>
-      <div id="circle9">9</div>
-    </div>    
-    <button id="button">click</button>
-</div>
+    <div id="ballArea"></div>
+  </div>
 
+  
 
   <script>
+
     const root = document.getElementById("root");
-    const circleList = document.getElementById("circleList");
-    const button = document.getElementById("button");
+    const ballArea = document.getElementById("ballArea");
 
-    
-    const circle1 = document.getElementById("circle1");
-    const circle2 = document.getElementById("circle2");
-    const circle3 = document.getElementById("circle3");
-    const circle4 = document.getElementById("circle4");
-    const circle5 = document.getElementById("circle5");
-    const circle6 = document.getElementById("circle6");
-    const circle7 = document.getElementById("circle7");
-    const circle8 = document.getElementById("circle8");
-    const circle9 = document.getElementById("circle9");
-    
-    
-    
-    
-    
-    
+    ballArea.style.width = "100vw";
+    ballArea.style.height = "80vh";
+    ballArea.style.display = "flex";
+    ballArea.style.backgroundColor = "gray";
+    ballArea.style.justifyContent = "space-around";
+    ballArea.style.alignItems = "center";
+
     root.style.display = "flex";
-    root.style.width = "100vw";
-    root.style.height = "100vh";
-    root.style.justifyContent = "center"
-    root.style.alignItems = "center"
+    root.style.justifyContent = "center";
+    root.style.alignItems = "center";
     root.style.flexDirection = "column";
-    
-    circleList.style.width = "70vw";
-    circleList.style.height = "50vw";
-    circleList.style.justifyContent = "center";
-    circleList.style.alignItems = "center";
-    circleList.style.display = "flex";
-    circleList.style.justifyContent ="space-around";
-
-    button.style.width = "100px";
-    button.style.height = "50px";
 
     
-    let count = 0
-    let state = true;
-    button.addEventListener("click",function () {
-      if ( state===true) {
-        circle1.style.marginBottom = "200px";
-        state=false;
-        console.log("첫번째");
-      }else if(state===true) {
-        circle2.style.marginTop = "200px";
-        state=false;
-        console.log("두번째");
-        
-      }else {
-        circle3.style.marginBottom = "200px";
-        console.log("세번째");
+    const ballList = [];
 
+    const ballMaxCount = 9;
+    for ( let i =0; i < ballMaxCount; i++) {
+      const newBall = document.createElement("div");
+      newBall.style.width = "50px";
+      newBall.style.height = "50px";
+      newBall.style.borderRadius = "50%";
+      newBall.style.backgroundColor = "orange";
+      newBall.style.justifyContent = "center";
+      newBall.style.alignItems = "center";
+      newBall.style.display = "flex";
+      newBall.id = "div" + i;
+      newBall.textContent = i;
+      ballArea.appendChild(newBall);
+      ballList.push(newBall);
+    }
+
+    console.log(ballList);
+
+    const triggerButton = document.createElement("button");
+    triggerButton.style.width = "100px";
+    triggerButton.style.height = "50px";
+    triggerButton.style.backgroundColor = "red";
+    triggerButton.textContent = "click";
+
+    root.appendChild(triggerButton);
+
+    // 0 : 최초상태
+    // 1 : 위로 올라간 상태
+    // 2 : 밑으로 내려간 상태
+    let clickOder = 0;
+    triggerButton.addEventListener("click" ,function (){
+      if(clickOder === ballList.length) {
+      for(let i =0; i < ballList.length; i++) {
+        if(i % 2 ===0) {
+          ballList[i].style.marginBottom = "0px";
+        }else {
+          ballList[i].style.marginTop = "0px";
+        }
       }
-    
+      clickOder =0;
+      return;
+      }
+     if(clickOder % 2 ===0) { // 짝수일 경우
+       ballList[clickOder].style.marginBottom = "200px";
+     }else {
+       ballList[clickOder].style.marginTop = "200px";
+     }
+     clickOder++;
       
-    })
-    
-      
-      
-      
-      
-    </script>
+    });
     
     
     
     
-    
+  </script>
   
-    </body>
-    </html>
-  <!-- //   if(state===true) {
-  //     circle1.style.marginBottom = "200px";
-  //     state=false;
-  //     console.log("down");
-      
-
-      
-  //   }else {
-  //     circle2.style.marginTop = "200px";
-  //     state=true;
-  //     console.log("up");
-     
-  //     }
-      
-
-  // });
-     -->
-    
+  
+  
+</body>
+</html>
