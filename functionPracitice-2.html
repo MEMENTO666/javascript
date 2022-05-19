@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functionPractice-2</title>
+</head>
+<body>
+  <span id ="test">스판덱스</span>
+
+  <script>
+    const test = document.getElementById("test");
+
+    console.dir(test);
+
+    function tagNameMaker (element) {
+      if(element.tagName !== "" && element.tagName !== null) {
+        return element.tagName.toLowerCase();
+      }
+    };
+
+    console.log(tagNameMaker(test));
+    
+    const makeSpan = document.createElement(tagNameMaker(test));
+    // const makeSpan = document.createElement(tagName(test));
+    
+    document.appendChild(makeSpan);
+    console.log(makeSpan);
+  </script>
+  
+  
+  
+</body>
+</html>

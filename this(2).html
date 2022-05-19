@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this(2)</title>
+</head>
+<body>
+  <h1 id="h1">아아</h1>
+  <h2 id="h2">아아앙</h1>
+  <h3 id="h3">아아아앙</h1>
+  <h4 id="h4">호롤롤롤롱</h1>
+
+
+    <script>
+      const root = window.document.querySelector("#root");
+
+      const h1 = document.getElementById("h1");
+      const h2 = document.getElementById("h2");
+      const h3 = document.getElementById("h3");
+      const h4 = document.getElementById("h4");
+
+    
+      function thisEvent(element,color,fontSize) {
+        element.addEventListener ("click", function (){
+          console.log("gg");
+          this.style.weight = fontSize;
+        });
+        element.addEventListener ("click",function (){
+          this.style.color = color;
+        })
+      }
+      
+      thisEvent(h1,"red");
+      thisEvent(h2,"green");
+      thisEvent(h3,"blue");
+      thisEvent(h4,"yellow");
+      
+    </script>
+    
+    
+    
+  </body>
+</html>

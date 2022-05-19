@@ -8,6 +8,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+
   <style>
     *{margin:0; padding:0; box-sizing: border-box;}
       body { overflow-x: hidden;}
@@ -29,8 +34,10 @@
       align-items: center;
       flex-direction: column;
       padding-top: 70px;
-      background: linear-gradient(4deg, rgb(24, 77, 224),rgb(12, 145, 116));
+      background: linear-gradient(4deg, rgb(34, 86, 110),rgb(24, 31, 49));
       border-radius: 70px;
+      overflow: hidden;
+
     }
     
     #js  {
@@ -59,15 +66,17 @@
       position: relative;
       bottom:50px;
       font-family: 'Black Han Sans', sans-serif;
+
     }
 
-    h1 { text-shadow: 4px 4px 5px rgb(68, 68, 68) ;}
+    h1 { text-shadow: 4px 5px 10px rgb(0, 0, 0) ;}
 
     #search {
-      width:80vh;
+      width:100%;
       height:8vh;
-      background:linear-gradient(6deg, rgb(230, 156, 18) , rgb(255, 68, 0));
+      background:linear-gradient(0.7deg, rgb(218, 178, 0) , rgb(255, 0, 0));
       margin-top: 50px;
+
     }
     #methodList {
       width:55vw;
@@ -77,6 +86,8 @@
       flex-wrap: wrap;
       justify-content: space-evenly;
       display: flex;
+      color: whitesmoke;
+      font-family: 'Nanum Myeongjo', serif;
     }
     #methodList>div {
       width:130px;
@@ -88,25 +99,33 @@
       font-weight: bold;
       font-size: 17px;
       cursor: pointer;
+
     }
     .text {
       width:80vw;
       height:20vh;
-      border: 1px solid rgba(229, 255, 0, 0.308);
+      border: 1px solid rgb(166, 255, 0);
       font-weight: bold;
       padding: 10px;
       line-height: 30px;
       color: white;
       margin: 5px;
+      font-family: 'Nanum Myeongjo', serif;
+
+
+
     }
     .text2 {
       width:80vw;
       height:30vh;
-      border: 1px solid rgba(229, 255, 0, 0.308);
+      border: 1px solid rgb(166, 255, 0);
       font-weight: bold;
       padding: 10px;
       line-height: 30px;
       color: white;
+      font-family: 'Nanum Myeongjo', serif;
+
+      
     }
     .textbox {
       width:20px;
@@ -115,6 +134,20 @@
       margin-top: 5px;
     }
 
+    #topButton {
+      width:50px;
+      height:50px;
+      top:90%;
+      left:91%;
+      background-color: darkgray;
+      position: fixed;
+      z-index: 2;
+      opacity: 0.5;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 50%;
+    }
     
   </style>
   
@@ -123,15 +156,15 @@
 <body>
   <div id="root">
     <div id="container">
-    <div id="js"><h1>javascript</h1></div>
-    <div id="method"><h1>method</h1></div>
-    <div id="search"></div>
-    <div id="methodList">
-     <div id="box1">
-       <p><span style="color: red;">1.</span>forEach( )</p>
-     </div>
-     <div id="box2">
-      <p><span style="color: red;">2.</span>push( )</p>
+      <div id="js"><h1>javascript</h1></div>
+      <div id="method"><h1>method</h1></div>
+      <div id="search"></div>
+      <div id="methodList">
+        <div id="box1">
+          <p><span style="color: red;">1.</span>forEach( )</p>
+        </div>
+        <div id="box2">
+          <p><span style="color: red;">2.</span>push( )</p>
     </div>
     <div id="box3">
       <p><span style="color: red;">3.</span>pop( )</p>
@@ -196,32 +229,33 @@
     <div id="box23">
       <p><span style="color: red;">23.</span>findIndex( )</p>
     </div>
-    </div id="box23">
-      <div class="text">
-        <p><span style="color: red; font-size: 25px;">1.</span>forEach( )</p> 
-        <div class="textbox"></div>
-        <p><span style="color:white;">Array 객체에서만 사용가능한 메서드로 배열의 요소들로 반복하여 작업을 수행한다.<br> 배열의 값을 하나씩 순차적으로 해당 함수에 전달한다. <br>배열이 가진 모든 값으로 순차적으로 리턴값이 없는 함수를 처리한다.</p></span> 
-      </div>
-      <div class="text">
-        <p><span style="color: red; font-size: 25px;">2.</span>push( )</p> 
-        <div class="textbox"></div>
-        <p><span style="color:rgb(255, 255, 255);">배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환합니다.</p></span> 
-      </div>
-      <div class="text">
-        <p><span style="color: red; font-size: 25px;">3.</span>pop( )</p> 
-        <div class="textbox"></div>
-        <p><span style="color:rgb(255, 255, 255);">배열에서 마지막 요소를 제거하고 제거된 요소를 반환한다. 원본 배열을 바꾼다. <br>만약 빈 Array에서 pop을 하게 되면, 반환 값은 undefined이다.</p></span> 
-      </div>
-      <div class="text">
-        <p><span style="color: red; font-size: 25px;">4.</span>shift( )</p> 
-        <div class="textbox"></div>
-        <p><span style="color:rgb(255, 255, 255);">배열을 왼쪽으로 한칸씩 이동시키는 것이다. 자연스레 0번째 index에 있던 값은 없어지고 배열의 크기는 1이 작아진다.</p></span> 
-      </div>
-      <div class="text">
-        <p><span style="color: red; font-size: 25px;">5.</span>unshift( )</p> 
-        <div class="textbox"></div>
-        <p><span style="color:rgb(255, 255, 255);"> 새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.</p></span> 
-      </div>
+    
+  </div id="box23">
+  <div class="text">
+    <p><span style="color: red; font-size: 25px;">1.</span>forEach( )</p> 
+    <div class="textbox"></div>
+    <p><span style="color:white;">Array 객체에서만 사용가능한 메서드로 배열의 요소들로 반복하여 작업을 수행한다.<br> 배열의 값을 하나씩 순차적으로 해당 함수에 전달한다. <br>배열이 가진 모든 값으로 순차적으로 리턴값이 없는 함수를 처리한다.</p></span> 
+  </div>
+  <div class="text">
+    <p><span style="color: red; font-size: 25px;">2.</span>push( )</p> 
+    <div class="textbox"></div>
+    <p><span style="color:rgb(255, 255, 255);">배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환합니다.</p></span> 
+  </div>
+  <div class="text">
+    <p><span style="color: red; font-size: 25px;">3.</span>pop( )</p> 
+    <div class="textbox"></div>
+    <p><span style="color:rgb(255, 255, 255);">배열에서 마지막 요소를 제거하고 제거된 요소를 반환한다. 원본 배열을 바꾼다. <br>만약 빈 Array에서 pop을 하게 되면, 반환 값은 undefined이다.</p></span> 
+  </div>
+  <div class="text">
+    <p><span style="color: red; font-size: 25px;">4.</span>shift( )</p> 
+    <div class="textbox"></div>
+    <p><span style="color:rgb(255, 255, 255);">배열을 왼쪽으로 한칸씩 이동시키는 것이다. 자연스레 0번째 index에 있던 값은 없어지고 배열의 크기는 1이 작아진다.</p></span> 
+  </div>
+  <div class="text">
+    <p><span style="color: red; font-size: 25px;">5.</span>unshift( )</p> 
+    <div class="textbox"></div>
+    <p><span style="color:rgb(255, 255, 255);"> 새로운 요소를 배열의 맨 앞쪽에 추가하고, 새로운 길이를 반환합니다.</p></span> 
+  </div>
       <div class="text">
         <p><span style="color: red; font-size: 25px;">6.</span>index( )</p> 
         <div class="textbox"></div>
@@ -317,7 +351,7 @@
         <div class="textbox"></div>
         <p><span style="color:rgb(255, 255, 255);">주어진 판별 함수를 만족하는 배열의 첫 번째 요소에 대한 인덱스를 반환합니다. 만족하는 요소가 없으면 -1을 반환합니다.</p></span> 
       </div>
-     
+      <button id="topButton">TOP</button>
     </div>
   </div>
 
@@ -346,62 +380,64 @@
     const box22= document.getElementById("box22");
     const box23= document.getElementById("box23");
 
+    const button = document.getElementById("topButton");
+
     box1.addEventListener ("click",function (){
-      window.scrollTo({top:1300 , behavior : "smooth"});
+      window.scrollTo({top:1250 , behavior : "smooth"});
     })
     box2.addEventListener ("click",function (){
-      window.scrollTo({top:1500 , behavior : "smooth"});
+      window.scrollTo({top:1450 , behavior : "smooth"});
     })
     box3.addEventListener ("click",function (){
-      window.scrollTo({top:1700 , behavior : "smooth"});
+      window.scrollTo({top:1650 , behavior : "smooth"});
     })
     box4.addEventListener ("click",function (){
-      window.scrollTo({top:1900 , behavior : "smooth"});
+      window.scrollTo({top:1850 , behavior : "smooth"});
     })
     box5.addEventListener ("click",function (){
-      window.scrollTo({top:2100 , behavior : "smooth"});
+      window.scrollTo({top:2030 , behavior : "smooth"});
     })
     box6.addEventListener ("click",function (){
-      window.scrollTo({top:2300 , behavior : "smooth"});
+      window.scrollTo({top:2210 , behavior : "smooth"});
     })
     box7.addEventListener ("click",function (){
-      window.scrollTo({top:2500 , behavior : "smooth"});
+      window.scrollTo({top:2400 , behavior : "smooth"});
     })
     box8.addEventListener ("click",function (){
-      window.scrollTo({top:2700 , behavior : "smooth"});
+      window.scrollTo({top:2600 , behavior : "smooth"});
     })
     box9.addEventListener ("click",function (){
-      window.scrollTo({top:2900 , behavior : "smooth"});
+      window.scrollTo({top:2800 , behavior : "smooth"});
     })
     box10.addEventListener ("click",function (){
-      window.scrollTo({top:3100 , behavior : "smooth"});
+      window.scrollTo({top:2980 , behavior : "smooth"});
     })
     box11.addEventListener ("click",function (){
-      window.scrollTo({top:3300 , behavior : "smooth"});
+      window.scrollTo({top:3170 , behavior : "smooth"});
     })
     box12.addEventListener ("click",function (){
-      window.scrollTo({top:3500 , behavior : "smooth"});
+      window.scrollTo({top:3360 , behavior : "smooth"});
     })
     box13.addEventListener ("click",function (){
-      window.scrollTo({top:3700 , behavior : "smooth"});
+      window.scrollTo({top:3550 , behavior : "smooth"});
     })
     box14.addEventListener ("click",function (){
-      window.scrollTo({top:3850 , behavior : "smooth"});
+      window.scrollTo({top:3750 , behavior : "smooth"});
     })
     box15.addEventListener ("click",function (){
-      window.scrollTo({top:4150 , behavior : "smooth"});
+      window.scrollTo({top:4015 , behavior : "smooth"});
     })
     box16.addEventListener ("click",function (){
-      window.scrollTo({top:4350 , behavior : "smooth"});
+      window.scrollTo({top:4210 , behavior : "smooth"});
     })
     box17.addEventListener ("click",function (){
-      window.scrollTo({top:4550 , behavior : "smooth"});
+      window.scrollTo({top:4395 , behavior : "smooth"});
     })
     box18.addEventListener ("click",function (){
-      window.scrollTo({top:4750 , behavior : "smooth"});
+      window.scrollTo({top:4590 , behavior : "smooth"});
     })
     box19.addEventListener ("click",function (){
-      window.scrollTo({top:4950 , behavior : "smooth"});
+      window.scrollTo({top:4780 , behavior : "smooth"});
     })
     box20.addEventListener ("click",function (){
       window.scrollTo({top:5150 , behavior : "smooth"});
@@ -417,6 +453,11 @@
     })
     box23.addEventListener ("click",function (){
       window.scrollTo({top:5350 , behavior : "smooth"});
+    })
+    
+    button.addEventListener("click",function (){
+      window.scrollTo({top:0,behavior:"smooth"});
+      console.log("gg")
     })
     
     

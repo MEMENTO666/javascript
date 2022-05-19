@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functionPractice</title>
+</head>
+<body>
+  <script>
+    // 배열 생성기 //
+
+    function add(a,b) {
+      return a+b;
+    }
+    
+    function arrayMaker (element){
+      let arr = [];
+      arr[0] = element;
+      arr[1] = add(1,2);
+       if(typeof element === "string") {
+        arr[2] = element.length;
+      }
+      return arr;
+    };
+    
+    
+    console.log((arrayMaker("성윤")));
+    
+  </script>
+</body>
+</html>
