@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forIn</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script>
+
+    const root = document.getElementById("root");
+    console.log(typeof root);
+
+
+    for(let properties in root) {
+      const p = document.createElement("p");
+      p.textContent = properties;
+      root.appendChild(p);
+    }
+
+      
+      const props = document.getElementsByTagName("p");
+      const text = Array.from(props);
+      
+      text.forEach(function(Element,index) {
+        if(index % 2===0) {
+          Element.style.color = "red";
+          Element.style.display = "flex";
+          Element.style.justifyContent = "center";
+        }else {
+          Element.style.color = "blue";
+        }
+
+      });
+     // Array.from
+     // ForEach
+     // function(Element, index ...)
+    
+    
+
+     
+      
+      
+      
+      
+     
+    
+  </script>
+  
+  
+</body>
+</html>
